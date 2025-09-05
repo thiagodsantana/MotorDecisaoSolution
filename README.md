@@ -1,7 +1,7 @@
 ````markdown
-# 🚀 Motor de Decisão - Cloud Run + Eventarc
+# 🚀 Motor de Decisão - Cloud Run, Function + Eventarc
 
-Este projeto demonstra uma arquitetura **serverless no Google Cloud** usando:
+Este projeto demonstra uma arquitetura **ClourRun e Serverless no Google Cloud** usando:
 
 - **Cloud Run** para expor uma API REST que recebe propostas.
 - **Cloud Storage** como bucket de entrada e saída.
