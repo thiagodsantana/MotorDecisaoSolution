@@ -1,10 +1,6 @@
 ```markdown
 # Motor de Decisão de Crédito – Infraestrutura GCP com Terraform
 
-[![Terraform](https://img.shields.io/badge/Terraform-v1.8.0-blue)](https://www.terraform.io/)
-[![GCP](https://img.shields.io/badge/GCP-Cloud_Run-red)](https://cloud.google.com/run)
-[![Status](https://img.shields.io/badge/Status-Deploy%20Completo-green)](#)
-
 Infraestrutura para o **Motor de Decisão de Crédito** na **Google Cloud Platform**, utilizando:
 
 - **Cloud Run**: API pública e Function interna.
