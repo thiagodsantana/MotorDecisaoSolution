@@ -39,7 +39,7 @@ public class Function(ILogger<Function> logger) : ICloudEventFunction<StorageObj
             var proposta = await BaixarECarregarPropostaAsync(data, cancellationToken);
 
             logger.LogInformation("Proposta recebida: {Nome}, Idade {Idade}, Renda {Renda}",
-                proposta.nome, proposta.idade, proposta.rendaMensal);
+                proposta.Nome, proposta.Idade, proposta.RendaMensal);
 
             // Processar decisão
             var decisao = GerarDecisao(proposta);
@@ -83,26 +83,26 @@ public class Function(ILogger<Function> logger) : ICloudEventFunction<StorageObj
 
     private static DecisaoResult GerarDecisao(Proposta proposta)
     {
-        bool aprovado = proposta.idade is > 18 and < 60 && proposta.rendaMensal > 2000;
+        bool aprovado = proposta.Idade is > 18 and < 60 && proposta.RendaMensal > 2000;
 
         return new DecisaoResult
         {
             Id = Guid.NewGuid().ToString("N"),
             Status = aprovado ? "APPROVED" : "REJECTED",
-            ValorAprovado = aprovado ? (proposta.rendaMensal * 12) / 10m : 0,
+            ValorAprovado = aprovado ? (proposta.RendaMensal * 12) / 10m : 0,
             DataDecisao = DateTime.UtcNow
         };
     }
 }
 
-public class Proposta
+public record Proposta
 {
-    public string nome { get; set; } = string.Empty;
-    public string cpf { get; set; } = string.Empty;
-    public int rendaMensal { get; set; }
-    public int idade { get; set; }
-    public string telefone { get; set; } = string.Empty;
-    public string email { get; set; } = string.Empty;
+    public string Nome { get; set; } = string.Empty;
+    public string Cpf { get; set; } = string.Empty;
+    public int RendaMensal { get; set; }
+    public int Idade { get; set; }
+    public string Telefone { get; set; } = string.Empty;
+    public string Email { get; set; } = string.Empty;
 }
 
 public record DecisaoResult
