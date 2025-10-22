@@ -14,7 +14,6 @@ namespace ProcessarProposta;
 public class Function(ILogger<Function> logger) : ICloudEventFunction<StorageObjectData>
 {
     private readonly StorageClient _storage = StorageClient.Create();
-    private readonly string _inputBucket = "motor-decisao-input";
     private readonly string _outputBucket = "motor-decisao-output";
 
     private static readonly JsonSerializerOptions _jsonOptions = new()
