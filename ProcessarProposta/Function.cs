@@ -26,7 +26,6 @@ public class Function(ILogger<Function> logger) : ICloudEventFunction<StorageObj
     {
         try
         {
-            // Validação inicial
             if (!EhArquivoValido(data))
             {
                 logger.LogInformation("Ignorado: {Bucket}/{Name}", data.Bucket, data.Name);
@@ -35,16 +34,13 @@ public class Function(ILogger<Function> logger) : ICloudEventFunction<StorageObj
 
             logger.LogInformation("Processando arquivo: gs://{Bucket}/{Name}", data.Bucket, data.Name);
 
-            // Ler proposta
             var proposta = await BaixarECarregarPropostaAsync(data, cancellationToken);
 
             logger.LogInformation("Proposta recebida: {Nome}, Idade {Idade}, Renda {Renda}",
                 proposta.Nome, proposta.Idade, proposta.RendaMensal);
 
-            // Processar decisão
             var decisao = GerarDecisao(proposta);
 
-            // Salvar decisão
             var outputName = await SalvarDecisaoAsync(data, decisao, cancellationToken);
 
             logger.LogInformation("Decisão gerada com sucesso: gs://{Bucket}/{ObjectName}", _outputBucket, outputName);
@@ -52,7 +48,7 @@ public class Function(ILogger<Function> logger) : ICloudEventFunction<StorageObj
         catch (Exception ex)
         {
             logger.LogError(ex, "Erro ao processar evento do Cloud Storage.");
-            throw; // repropaga para logging da plataforma
+            throw;
         }
     }
 
