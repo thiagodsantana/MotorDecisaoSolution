@@ -63,7 +63,7 @@ public class Function(ILogger<Function> logger) : ICloudEventFunction<StorageObj
         ms.Position = 0;
 
         return await JsonSerializer.DeserializeAsync<Proposta>(ms, _jsonOptions, ct)
-               ?? throw new InvalidOperationException("JSON inválido ou vazio.");
+               ?? throw new InvalidOperationException("JSON inválido ou vazio!");
     }
 
     private async Task<string> SalvarDecisaoAsync(StorageObjectData origem, DecisaoResult decisao, CancellationToken ct)
