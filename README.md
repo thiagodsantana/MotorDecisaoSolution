@@ -1,5 +1,3 @@
-Perfeito! Aqui está uma versão **otimizada em Markdown** do README, pronta para GitHub, incluindo **badges de Terraform, GCP e status de deploy**:
-
 ```markdown
 # Motor de Decisão de Crédito – Infraestrutura GCP com Terraform
 
