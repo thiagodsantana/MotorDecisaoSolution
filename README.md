@@ -1,6 +1,6 @@
 ````markdown
-# 🧠 MotorDecisaoSolution  
-> Sistema de Motor de Decisão de Crédito em nuvem com infraestrutura como código e execução serverless na Google Cloud Platform (GCP).
+# 🧠 MotorDecisaoSolution
+> Sistema de Motor de Decisão de Crédito em nuvem com infraestrutura como código e execução serverless na Google Cloud Platform
 
 ![.NET](https://img.shields.io/badge/.NET-8.0-blueviolet?logo=dotnet)
 ![Terraform](https://img.shields.io/badge/Terraform-IaC-623CE4?logo=terraform)
