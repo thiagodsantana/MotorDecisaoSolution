@@ -1,4 +1,3 @@
-markdown
 # 🧠 MotorDecisaoSolution
 > Sistema de Motor de Decisão de Crédito em nuvem com infraestrutura como código e execução serverless na Google Cloud Platform
 
