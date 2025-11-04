@@ -20,15 +20,13 @@ A infraestrutura é totalmente gerenciada via **Terraform**, permitindo reprodut
 
 ## 🧩 Arquitetura da Solução  
 
-```mermaid
 flowchart TD
-    A[Usuário / Sistema Cliente] -->|POST /propostas| B[API - MotorDecisao.API]
-    B -->|Grava JSON| C[Bucket Input (GCS)]
-    C -->|Evento de novo arquivo| D[Eventarc Trigger]
-    D --> E[Função ProcessarProposta (Cloud Run)]
-    E -->|Resultado| F[Bucket Output (GCS)]
-    F -->|Disponibiliza Decisão| G[Consulta ou Integração Externa]
-````
+    A["Usuário / Sistema Cliente"] --> B["API - MotorDecisao.API"]
+    B --> C["Bucket Input (GCS)"]
+    C --> D["Eventarc Trigger"]
+    D --> E["Função ProcessarProposta (Cloud Run)"]
+    E --> F["Bucket Output (GCS)"]
+    F --> G["Consulta ou Integração Externa"]
 
 **Fluxo resumido:**
 
