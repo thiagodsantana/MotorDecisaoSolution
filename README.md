@@ -1,8 +1,3 @@
-Perfeito ✅ — abaixo está o **README.md completo em português**, profissional e pronto para colar diretamente no GitHub do repositório **MotorDecisaoSolution**.
-Inclui seções bem estruturadas, diagramas (em formato Markdown/PlantUML simplificado), badges e instruções detalhadas de setup e execução.
-
----
-
 ````markdown
 # 🧠 MotorDecisaoSolution  
 > Sistema de Motor de Decisão de Crédito em nuvem com infraestrutura como código e execução serverless na Google Cloud Platform (GCP).
