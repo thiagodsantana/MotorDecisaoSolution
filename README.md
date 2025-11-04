@@ -4,9 +4,10 @@
 
 ![.NET](https://img.shields.io/badge/.NET-8.0-blueviolet?logo=dotnet)
 ![Terraform](https://img.shields.io/badge/Terraform-IaC-623CE4?logo=terraform)
-![GCP](https://img.shields.io/badge/Google%20Cloud-Run%20%7C%20Storage%20%7C%20Eventarc-blue?logo=googlecloud)
+![Google Cloud](https://img.shields.io/badge/Google%20Cloud-Run%20|%20Storage%20|%20Eventarc-blue?logo=googlecloud)
 ![Docker](https://img.shields.io/badge/Docker-Container-blue?logo=docker)
 ![Status](https://img.shields.io/badge/Status-Ativo-success)
+
 
 ---
 
